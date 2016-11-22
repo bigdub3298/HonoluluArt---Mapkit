@@ -12,6 +12,8 @@
 		CF6FD45B1DE41D67001FD4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6FD45A1DE41D67001FD4A8 /* Assets.xcassets */; };
 		CF6FD45E1DE41D67001FD4A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6FD45C1DE41D67001FD4A8 /* LaunchScreen.storyboard */; };
 		CF6FD4661DE42065001FD4A8 /* ArtMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FD4651DE42065001FD4A8 /* ArtMapViewController.swift */; };
+		CF6FD46B1DE42513001FD4A8 /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = CF6FD46A1DE42513001FD4A8 /* PublicArt.json */; };
+		CF6FD46D1DE425BB001FD4A8 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FD46C1DE425BB001FD4A8 /* Artwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		CF6FD45D1DE41D67001FD4A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF6FD45F1DE41D67001FD4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF6FD4651DE42065001FD4A8 /* ArtMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtMapViewController.swift; sourceTree = "<group>"; };
+		CF6FD46A1DE42513001FD4A8 /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
+		CF6FD46C1DE425BB001FD4A8 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				CF6FD4691DE42097001FD4A8 /* ViewControllers */,
+				CF6FD46E1DE425C3001FD4A8 /* Model */,
 				CF6FD4681DE42086001FD4A8 /* Storyboards */,
 				CF6FD4671DE4207B001FD4A8 /* Core */,
 			);
@@ -64,6 +69,7 @@
 		CF6FD4671DE4207B001FD4A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CF6FD46A1DE42513001FD4A8 /* PublicArt.json */,
 				CF6FD4531DE41D67001FD4A8 /* AppDelegate.swift */,
 				CF6FD45A1DE41D67001FD4A8 /* Assets.xcassets */,
 				CF6FD45F1DE41D67001FD4A8 /* Info.plist */,
@@ -86,6 +92,14 @@
 				CF6FD4651DE42065001FD4A8 /* ArtMapViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CF6FD46E1DE425C3001FD4A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF6FD46C1DE425BB001FD4A8 /* Artwork.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6FD46B1DE42513001FD4A8 /* PublicArt.json in Resources */,
 				CF6FD45E1DE41D67001FD4A8 /* LaunchScreen.storyboard in Resources */,
 				CF6FD45B1DE41D67001FD4A8 /* Assets.xcassets in Resources */,
 				CF6FD4591DE41D67001FD4A8 /* Main.storyboard in Resources */,
@@ -161,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6FD4541DE41D67001FD4A8 /* AppDelegate.swift in Sources */,
+				CF6FD46D1DE425BB001FD4A8 /* Artwork.swift in Sources */,
 				CF6FD4661DE42065001FD4A8 /* ArtMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
