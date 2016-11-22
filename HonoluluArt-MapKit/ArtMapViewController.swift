@@ -9,16 +9,47 @@
 import UIKit
 import MapKit
 
-class ArtMapViewController: UIViewController {
+class ArtMapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    let regionRadius: CLLocationDistance = 1000
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.delegate = self
 
-        // Do any additional setup after loading the view.
+        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        
+        centerMapOnLocation(location: initialLocation)
+        
+        let artwork = Artwork(title: "King David Kalakaua", locationName: "Waikiki Gateway Park", discipline: "Sculpture", coordinate: CLLocationCoordinate2D(latitude:  21.283921, longitude: -157.831661))
+        
+        mapView.addAnnotation(artwork)
     }
 
+    // MARK: - Map View Delegate
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotation = annotation as? Artwork else { return nil }
+        
+        let identifier = "artPin"
+        var view: MKPinAnnotationView
+        
+        guard let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView else {
+            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+            return view
+        }
+        
+        dequeuedView.annotation = annotation
+        view = dequeuedView
+        return view
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -28,5 +59,12 @@ class ArtMapViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Helper functions
+    func centerMapOnLocation(location: CLLocation) {
+        let cordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 5.0, regionRadius * 5.0)
+        
+        mapView.setRegion(cordinateRegion, animated: true)
+    }
 
 }
