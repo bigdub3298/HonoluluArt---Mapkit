@@ -11,6 +11,7 @@
 		CF6FD4591DE41D67001FD4A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6FD4571DE41D67001FD4A8 /* Main.storyboard */; };
 		CF6FD45B1DE41D67001FD4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6FD45A1DE41D67001FD4A8 /* Assets.xcassets */; };
 		CF6FD45E1DE41D67001FD4A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6FD45C1DE41D67001FD4A8 /* LaunchScreen.storyboard */; };
+		CF6FD4661DE42065001FD4A8 /* ArtMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FD4651DE42065001FD4A8 /* ArtMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		CF6FD45A1DE41D67001FD4A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF6FD45D1DE41D67001FD4A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF6FD45F1DE41D67001FD4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF6FD4651DE42065001FD4A8 /* ArtMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +54,38 @@
 		CF6FD4521DE41D67001FD4A8 /* HonoluluArt-MapKit */ = {
 			isa = PBXGroup;
 			children = (
-				CF6FD4531DE41D67001FD4A8 /* AppDelegate.swift */,
-				CF6FD45A1DE41D67001FD4A8 /* Assets.xcassets */,
-				CF6FD4571DE41D67001FD4A8 /* Main.storyboard */,
-				CF6FD45C1DE41D67001FD4A8 /* LaunchScreen.storyboard */,
-				CF6FD45F1DE41D67001FD4A8 /* Info.plist */,
+				CF6FD4691DE42097001FD4A8 /* ViewControllers */,
+				CF6FD4681DE42086001FD4A8 /* Storyboards */,
+				CF6FD4671DE4207B001FD4A8 /* Core */,
 			);
 			path = "HonoluluArt-MapKit";
+			sourceTree = "<group>";
+		};
+		CF6FD4671DE4207B001FD4A8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CF6FD4531DE41D67001FD4A8 /* AppDelegate.swift */,
+				CF6FD45A1DE41D67001FD4A8 /* Assets.xcassets */,
+				CF6FD45F1DE41D67001FD4A8 /* Info.plist */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		CF6FD4681DE42086001FD4A8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CF6FD4571DE41D67001FD4A8 /* Main.storyboard */,
+				CF6FD45C1DE41D67001FD4A8 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		CF6FD4691DE42097001FD4A8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF6FD4651DE42065001FD4A8 /* ArtMapViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6FD4541DE41D67001FD4A8 /* AppDelegate.swift in Sources */,
+				CF6FD4661DE42065001FD4A8 /* ArtMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

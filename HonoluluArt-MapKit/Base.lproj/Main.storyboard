@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OPb-F1-3oC">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Art Map View Controller-->
+        <scene sceneID="upZ-9c-RSd">
+            <objects>
+                <viewController id="OPb-F1-3oC" customClass="ArtMapViewController" customModule="HonoluluArt_MapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eCj-PI-gZw"/>
+                        <viewControllerLayoutGuide type="bottom" id="g6H-KX-GWs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ElO-yr-Sys">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MXM-vv-lwt"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MXM-vv-lwt" firstAttribute="leading" secondItem="ElO-yr-Sys" secondAttribute="leading" id="0K2-nC-If9"/>
+                            <constraint firstItem="g6H-KX-GWs" firstAttribute="top" secondItem="MXM-vv-lwt" secondAttribute="bottom" id="9T4-R5-DZW"/>
+                            <constraint firstAttribute="trailing" secondItem="MXM-vv-lwt" secondAttribute="trailing" id="Zqz-Nt-44b"/>
+                            <constraint firstItem="MXM-vv-lwt" firstAttribute="top" secondItem="eCj-PI-gZw" secondAttribute="bottom" id="smI-iU-ql6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="MXM-vv-lwt" id="Tg7-Iv-osq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wx-tD-kKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="138"/>
+        </scene>
+    </scenes>
 </document>
