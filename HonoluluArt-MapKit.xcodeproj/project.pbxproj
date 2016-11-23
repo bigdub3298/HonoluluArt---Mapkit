@@ -14,6 +14,7 @@
 		CF6FD4661DE42065001FD4A8 /* ArtMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FD4651DE42065001FD4A8 /* ArtMapViewController.swift */; };
 		CF6FD46B1DE42513001FD4A8 /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = CF6FD46A1DE42513001FD4A8 /* PublicArt.json */; };
 		CF6FD46D1DE425BB001FD4A8 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FD46C1DE425BB001FD4A8 /* Artwork.swift */; };
+		CF6FD4701DE52A7E001FD4A8 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FD46F1DE52A7E001FD4A8 /* JSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CF6FD4651DE42065001FD4A8 /* ArtMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtMapViewController.swift; sourceTree = "<group>"; };
 		CF6FD46A1DE42513001FD4A8 /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
 		CF6FD46C1DE425BB001FD4A8 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		CF6FD46F1DE52A7E001FD4A8 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		CF6FD4671DE4207B001FD4A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CF6FD46F1DE52A7E001FD4A8 /* JSON.swift */,
 				CF6FD46A1DE42513001FD4A8 /* PublicArt.json */,
 				CF6FD4531DE41D67001FD4A8 /* AppDelegate.swift */,
 				CF6FD45A1DE41D67001FD4A8 /* Assets.xcassets */,
@@ -178,6 +181,7 @@
 				CF6FD4541DE41D67001FD4A8 /* AppDelegate.swift in Sources */,
 				CF6FD46D1DE425BB001FD4A8 /* Artwork.swift in Sources */,
 				CF6FD4661DE42065001FD4A8 /* ArtMapViewController.swift in Sources */,
+				CF6FD4701DE52A7E001FD4A8 /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

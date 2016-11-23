@@ -14,19 +14,26 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     let regionRadius: CLLocationDistance = 1000
+    var artworks = [Artwork]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.delegate = self
+        
 
         let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
         
         centerMapOnLocation(location: initialLocation)
         
-        let artwork = Artwork(title: "King David Kalakaua", locationName: "Waikiki Gateway Park", discipline: "Sculpture", coordinate: CLLocationCoordinate2D(latitude:  21.283921, longitude: -157.831661))
+        loadInitialData()
+        mapView.addAnnotations(artworks)
         
+        mapView.delegate = self
+        
+        /*
+        let artwork = Artwork(title: "King David Kalakaua", locationName: "Waikiki Gateway Park", discipline: "Sculpture", coordinate: CLLocationCoordinate2D(latitude:  21.283921, longitude: -157.831661))
         mapView.addAnnotation(artwork)
+        */
     }
 
     // MARK: - Map View Delegate
@@ -73,4 +80,37 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
         mapView.setRegion(cordinateRegion, animated: true)
     }
 
+    func loadInitialData() {
+        // 1
+        let fileName = Bundle.main.path(forResource: "PublicArt", ofType: "json");
+        var data: Data?
+        do {
+            data = try Data(contentsOf: URL(fileURLWithPath: fileName!), options: NSData.ReadingOptions(rawValue: 0))
+        } catch _ {
+            data = nil
+        }
+        
+        // 2
+        var jsonObject: Any? = nil
+        if let data = data {
+            do {
+                jsonObject = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions(rawValue: 0))
+            } catch _ {
+                jsonObject = nil
+            }
+        }
+        
+        // 3
+        if let jsonObject = jsonObject as? [String: Any],
+            // 4
+            let jsonData = JSONValue.fromObject(jsonObject)?["data"]?.array {
+            for artworkJSON in jsonData {
+                if let artworkJSON = artworkJSON.array,
+                    // 5
+                    let artwork = Artwork.fromJSON(artworkJSON) {
+                    artworks.append(artwork)
+                }
+            }
+        }
+    }
 }
